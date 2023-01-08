@@ -42,7 +42,7 @@ const Form: FC<FormProps> = ({ changeCountry }) => {
         </select>
 
         <input
-          className="px-6 py-2 text-xl rounded-2xl  transition-all duration-200 ease-in-out bg-blue-400 hover:rounded-md"
+          className="px-4 py-2 text-xl rounded-2xl cursor-pointer transition-all duration-200 ease-in-out bg-blue-400 hover:px-6 hover:rounded-md"
           type="submit"
           value="Search"
         />

@@ -24,10 +24,10 @@ const NewsFeed: FC<Props> = ({ news, country }) => {
   };
 
   return (
-    <div className="bg-stone-800 flex flex-col items-center overflow-hidden">
+    <div className="flex flex-col items-center bg-stone-800 overflow-hidden">
       <span className="text-xl text-gray-400">You are seeing top headlines for</span>
       <h1 className="text-5xl text-blue-100">{codeToName[country]}</h1>
-      <div className="p-4 pt-6 grid grid-cols-3">
+      <div className="p-4 pt-6 grid grid-cols-3 grid-flow-dense">
         {news?.map(article => (
           <Article key={article.url} article={article} />
         ))}
