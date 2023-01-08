@@ -7,7 +7,7 @@ import NewsFeed from "./components/NewsFeed";
 function App() {
   const apikey: string = "a481486cec3745ddae53821bb5132799";
   const [news, setNews] = useState<newsArticle[]>();
-  const [country, setCountry] = useState<Countries>(Countries.India);
+  const [country, setCountry] = useState<Countries>(Countries.USA);
 
   const fetchData = async (country: Countries) => {
     const url = new URL("https://newsapi.org/v2/top-headlines");

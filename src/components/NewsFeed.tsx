@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Countries } from "../modules/enums";
 import { newsArticle } from "../modules/interfaces";
+import Article from "./Article";
 
 interface Props {
   news: Array<newsArticle>;
@@ -23,17 +24,12 @@ const NewsFeed: FC<Props> = ({ news, country }) => {
   };
 
   return (
-    <div>
-      <h1>{codeToName[country]}</h1>
-      <div className="flex flex-col items-center">
-        {news.map(article => (
-          <div key={article.url}>
-            <img src={article.urlToImage} alt="" />
-            <h2 className="text-6xl text-red-500">{article.title}</h2>
-            <span>{article.description}</span>
-            <p>{`name: ${article.source.name}`}</p>
-            <a href={article.url}>MORE...</a>
-          </div>
+    <div className="bg-stone-800 flex flex-col items-center overflow-hidden">
+      <span className="text-xl text-gray-400">You are seeing top headlines for</span>
+      <h1 className="text-5xl text-blue-100">{codeToName[country]}</h1>
+      <div className="p-4 pt-6 grid grid-cols-3">
+        {news?.map(article => (
+          <Article key={article.url} article={article} />
         ))}
       </div>
     </div>
