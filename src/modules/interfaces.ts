@@ -1,17 +1,13 @@
 export interface newsArticle {
   source: {
-    id: string | null,
-    name: string | null
+    id: string,
+    name: string,
   },
-  author: string | null,
+  author: string,
   title: string,
   description: string,
   url: string,
   urlToImage: string,
   publishedAt: string,
   content: string
-}
-
-export interface FormProps {
-  fetchData: Function;
 }

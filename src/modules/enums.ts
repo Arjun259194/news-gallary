@@ -3,5 +3,11 @@ export enum Countries {
   Canada = "ca",
   Australia = "au",
   Japan = "jp",
-  USA = "us"
+  USA = "us",
+  Russia = "ru",
+  China = "cn",
+  Germany = "de",
+  Brazil = "br",
+  Mexico = "mx",
+  NewZealand = "nz",
 }

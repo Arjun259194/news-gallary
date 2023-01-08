@@ -1,8 +1,11 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import { Countries } from "../modules/enums";
-import { FormProps } from "../modules/interfaces";
 
-const Form: FC<FormProps> = ({ fetchData }) => {
+interface FormProps {
+  changeCountry: Function;
+}
+
+const Form: FC<FormProps> = ({ changeCountry }) => {
   const [country, setCountry] = useState<Countries>(Countries.USA);
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>): void => {
@@ -11,7 +14,7 @@ const Form: FC<FormProps> = ({ fetchData }) => {
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    fetchData(country);
+    changeCountry(country);
   };
 
   //! style the component after the login is done
@@ -26,6 +29,12 @@ const Form: FC<FormProps> = ({ fetchData }) => {
             <option value={Countries.Japan}>Japan</option>
             <option value={Countries.Canada}>Canada</option>
             <option value={Countries.Australia}>Australia</option>
+            <option value={Countries.Russia}>Russia</option>
+            <option value={Countries.China}>China</option>
+            <option value={Countries.Germany}>Germany</option>
+            <option value={Countries.Brazil}>Brazil</option>
+            <option value={Countries.Mexico}>Mexico</option>
+            <option value={Countries.NewZealand}>New Zealand</option>
           </select>
         </div>
 
