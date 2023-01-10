@@ -17,13 +17,13 @@ const Form: FC<FormProps> = ({ changeCountry }) => {
   };
 
   return (
-    <div className="p-2 pt-5 bg-stone-800 text-white flex items-center justify-center">
+    <div className="p-2 pt-5 bg-slate-100 text-white flex items-center justify-center">
       <form className="flex flex-col items-center [&>*]:mb-3" onSubmit={handleSubmit}>
-        <label className="text-xl" htmlFor="country">
+        <label className="text-2xl text-stone-800" htmlFor="country">
           Select country
         </label>
         <select
-          className="p-2 text-xl text-blue-100 bg-stone-700 rounded"
+          className="p-2 text-xl text-slate-100 border-none bg-stone-700 rounded"
           value={country}
           name="country"
           id="country"

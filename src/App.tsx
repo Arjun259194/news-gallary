@@ -17,7 +17,7 @@ function App() {
       const res = await fetch(url.href);
       res.ok ? null : new Error("Response not ok");
       const data = await res.json();
-      data == undefined ? new Error("Data is undefined") : setNews(data.articles);
+      data?.article ? new Error("Data is undefined") : setNews(data.articles);
     } catch (error) {
       console.log("%cThere is an Error :" + error, "color:red;font-size:3rem;");
     }
