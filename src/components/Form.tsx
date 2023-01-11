@@ -11,13 +11,13 @@ const Form: FC<FormProps> = ({ changeCountry }) => {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>): void =>
     setCountry(event.target.value as Countries);
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = (event: FormEvent): void => {
     event.preventDefault();
     changeCountry(country);
   };
 
   return (
-    <div className="p-2 pt-5 bg-slate-100 text-white flex items-center justify-center">
+    <div className="p-2 pt-5 bg-white text-white flex items-center justify-center">
       <form className="flex flex-col items-center [&>*]:mb-3" onSubmit={handleSubmit}>
         <label className="text-2xl text-stone-800" htmlFor="country">
           Select country
