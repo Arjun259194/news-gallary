@@ -6,7 +6,7 @@ const LoadingFeed = () => {
     <section className="flex flex-col items-center">
       <h3 className="text-5xl text-stone-800 font-bold">Loading News...</h3>
       <span className="h-10 my-10 aspect-square animate-spin">{loading}</span>
-      <div className="w-full grid grid-cols-4">
+      <div className="w-full grid grid-cols-4 grid-flow-dense">
         <LoadingArticle />
         <LoadingArticle />
         <LoadingArticle />
